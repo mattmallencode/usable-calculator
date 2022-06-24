@@ -1,0 +1,265 @@
+/*
+    Attribution: 
+    1. Secure alternative to eval borrowed from: https://www.educative.io/edpresso/eval-vs-function-in-javascript.
+    2. Calculator button layout mimics that of the default calculator app on my phone (Android).
+    3. All other credit can be attributed to Matt Mallen.
+*/
+
+@viewport {
+    width: device-width;
+}
+
+a {
+    color: inherit;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Ubuntu, sans-serif;
+    background-color: white;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav * {
+    font-size: large;
+}
+
+.dropdown-hidden {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    background-color: #F0F0F0;
+    width: min-content;
+    margin: 0px;
+    padding: 0px;
+}
+
+.dropdown-hidden * {
+    text-align: center;
+    margin: 5px;
+    padding: 3px 0px;
+}
+
+.drop-button {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.dropdown-button:hover .dropdown-hidden {
+    display: block;
+    width: 100px;
+}
+
+nav a:hover {
+    background-color: #FF6F00;
+}
+
+nav a:visited {
+    color: inherit;
+}
+
+nav {
+    width: 100%;
+    background-color: #F0F0F0;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+nav {
+    display: inline-flex;
+}
+
+nav ul {
+    list-style: none;
+    width: 90%;
+    display: inline-flex;
+    justify-content: right;
+}
+
+nav ul li {
+    margin: 0px 30px;
+}
+
+nav input, nav button {
+    height: min-content;
+    margin: auto
+}
+
+nav button {
+    margin-right: 50px;
+}
+
+input[type=text] {
+    width: 410px;
+}
+
+main {
+    margin-top: 1%;
+    margin-left: 1.5%;
+    box-sizing: border-box;
+    height: 100vh;
+    display: grid;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: minmax(180px, auto) repeat(5, 120px)
+}
+
+main div button {
+    margin: -2px;
+    padding: 0px;
+    width: 120px;
+    height: 120px;  
+    font-size: 3rem;
+    background-color: #F0F0F0;
+}
+
+main div button:hover {
+    background-color: #FF6F00;
+}
+
+.selected {
+    background-color: #FF6F00;
+}
+
+.selected:hover {
+    filter: brightness(150%);
+}
+div {
+    margin: 0px;
+    padding: 0px;
+}
+
+#row1 {
+    grid-area: 2 / 1 / span 1 / span 4;
+}
+
+#row2 {
+    grid-area: 3 / 1 / span 1 / span 4;
+}
+
+#row3 {
+    grid-area: 4 / 1 / span 1 / span 4;
+}
+
+#row4 {
+    grid-area: 5 / 1 / span 1 / span 4;
+}
+
+#row5 {
+    grid-area: 6 / 1 / span 1 / span 4;
+}
+
+#display {
+    grid-area: 1 / 1 / span 1 / span 4;
+    background-color: #FFAA7A;
+    width: 72.5%;
+    font-size: 1.7rem;
+    word-wrap: break-word;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px;
+    height: 57%;
+    margin-left: -2.7px;
+    margin-bottom: -35px;
+    border: 2px solid #212121;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#display .larger {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+#display .smaller {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+#display p {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* START OF MAX 1440PX I.E. PHONES HELD IN PORTRAIT MODE */
+@media screen and (max-width: 414px) and (orientation:portrait) {
+    main {
+        grid-template-columns: repeat(4, 75px);
+        grid-template-rows: minmax(90px, auto) repeat(5, 60px)
+    }
+
+    main div button {
+        margin: -2px;
+        padding: 0px;
+        width: 60px;
+        height: 60px;  
+        font-size: 1.5rem;
+        background-color: #F0F0F0;
+    }
+
+    #display {
+        width: 65%;
+        margin-left: -2px;
+        margin-bottom: 0px;
+    }
+
+    #display .larger {
+        font-size: 1.15rem;
+        font-weight: bold;
+    }
+    
+    #display .smaller {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+
+    main {
+        margin-right: -12.5%;
+    }
+
+    nav * {
+        font-size: small;
+    }
+
+    nav button {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    nav ul {
+        width: 100%;
+        margin-left: -185px;
+        margin-right: 10px;
+    }
+
+    nav ul li {
+        margin: 6px;    
+    }
+
+    input[type=text] {
+        width:40px;
+        margin-left: -10px; 
+        margin-right: 0px;
+    }
+
+    nav ul {
+        white-space: nowrap;
+    }
+
+    .dropdown-button:hover .dropdown-hidden {
+        display: block;
+        width: 70px;
+        margin-left: -1%;
+    } 
+}
+/* END OF MAX 1440PX I.E. PHONES HELD IN PORTRAIT MODE */

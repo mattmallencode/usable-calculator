@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <!--
+        Attribution: 
+        1. Secure alternative to eval borrowed from: https://www.educative.io/edpresso/eval-vs-function-in-javascript.
+        2. Calculator button layout mimics that of the default calculator app on my phone (Android).
+        3. All other credit can be attributed to Matt Mallen.
+    -->
+    <meta name="description" content="A free online calculator.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li class="dropdown-button">
+          <a href="#">Calculators</a>
+          <ul class="dropdown-hidden">
+            <li><a href="#">Basic</a></li>
+            <li><a href="#">Scientific</a></li>
+            <li><a href="#">BMI</a></li> 
+            <li><a href="#">Darts</a></li>
+            <li><a href="#">Patio</a></li>
+            <li><a href="#">Percent</a></li>
+            <li><a href="#">Google</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-button">
+          <a href="#">Converters</a>
+          <ul class="dropdown-hidden">
+            <li><a href="#">Ring Size</a></li>
+            <li><a href="#">Distance</a></li>
+            <li><a href="#">Length</a></li> 
+            <li><a href="#">Temp</a></li>
+            <li><a href="#">Volume</a></li>
+            <li><a href="#">Weight</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-button">
+          <a href="#">Other Tools</a>
+          <ul class="dropdown-hidden">
+            <li><a href="#">Abacus</a></li>
+            <li><a href="#">Stopwatch</a></li>
+            <li><a href="#">Names</a></li> 
+          </ul>
+        </li>
+        <li class="dropdown-button">
+          <a href="#">About Info</a>
+          <ul class="dropdown-hidden">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy</a></li> 
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+      <input type="text" placeholder="Search for other tools e.g. 'BMI calculator'">
+      <button>Go</button>
+    </nav>
+  <main>
+      <div id="display">
+        <p id="calculation">123+</p>
+        <p id="tally">456</p>
+      </div>
+      <div id="row1">
+        <button id="clear">AC</button>
+        <button id="delete">DEL</button>
+        <button class="number">%</button>
+        <button class="operator">÷</button>
+      </div>
+      <div id="row2">
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="operator">x</button>
+      </div>
+      <div id="row3">
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="operator">-</button>
+      </div>
+      <div id="row4">
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="operator">+</button>
+      </div>
+      <div id="row5">
+        <button class="number">.</button>
+        <button class="number">0</button>
+        <button id="brackets">()</button>
+        <button id="equals">=</button>
+      </div>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
