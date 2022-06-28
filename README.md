@@ -2,3 +2,7 @@
 * Calculator made in vanilla HTML, CSS, and, JavaScript. 
 * "Usable" redesign of the websit and calculator found on https://www.online-calculator.com/
 * **Important:** This prototype is incomplete and is simply a proof of concept based on the issues identified - e.g. brackets do not work.
+
+## Goals of redesign
+* s
+* Minimize short-term memory demand
