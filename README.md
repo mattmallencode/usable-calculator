@@ -50,9 +50,6 @@
 * To reduce the learning curve, a paragraph above the calculator will detail the fact that the user can interact with the calculator using a keyboard.
 * For the scientific calculator there will be an expandable dialogue explaining how to use that calculator's more advanced features.
 
-# Live version
-https://cs1.ucc.ie/~mm55/usability/index.html
-
 # Attribution
 1. Secure alternative to eval borrowed from: https://www.educative.io/edpresso/eval-vs-function-in-javascript.
 2. Calculator button layout mimics that of the default calculator app on my phone (Android).
